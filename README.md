@@ -1,7 +1,7 @@
 # EQPcreateFromBlock
 Prove of Concept / sample code: In Plant 3D create an equipment and the nozzles automatically
 
-This is sample code, use at own risk. Furthermore this is a prove of concept, so it only works for this specific example showing the principles that are needed to create a tool to convert AutoCAD blocks into Plant 3D equipment with nozzles with one click.
+This is sample code, use at own risk. Furthermore this is a prove of concept, so it only works for this specific example showing the principles that are needed to create a tool to convert AutoCAD blocks into Plant 3D equipment with intelligent nozzles with one click.
 
 This example code is based on an example file (from grabcad.com) which was imported to Inventor. From there is was shared with AutoCAD using the ACC based Data Exchange (beta at date of writing: https://apps.autodesk.com/BIM360/en/Detail/Index?id=8886495673576738326&appLang=en&os=Web). In AutoCAD a native AutoCAD DWG block was received from the Data Exchange (see DWG in this repository).
 
@@ -13,9 +13,11 @@ So all written above leads to an AutoCAD block of a vessel with nozzles availabl
 - the vessel block name represents the equipment name (there might be also other ways to receive information, because the central blocks has block parameters)
 - the nozzle block names need to contain all information that is needed on the Plant 3D side in order to assign the correct nozzle, e.g. size, pressure class, standard, description, ..
 - the nozzle block origin must represent the connection point (port) in Plant 3D
-- the nozzle block must be rotation symmetrical, because the connection direction is detected by the center of the bounding box of the nozzle block. This condition could be replace by an additional drawing element in Inventor, e.g. a point or a line
+- the nozzle block must be rotation symmetrical, because the connection direction is detected by the center of the bounding box of the nozzle block. This condition could be replaced by an additional drawing element in Inventor, e.g. a point or a line
 
-So when all above is given, this code shows how work with it to create an equiment from this block (can be found in attached DWG). As this is a prove of contept, only one nozzle type will be converted to intelligent nozzles by the tool and this code only works with the given DWG. 
+So when all above is given, this code shows how to create an equiment from this block (can be found in attached DWG). As this is a prove of contept, only one nozzle type will be converted to intelligent nozzles by the tool and this code only works with the given DWG. 
+
+The concept could be that for equipment with many nozzles you use such a tool to quickly convert it. If updates are coming in over the Data Exchange, the block will be replaced in Plant 3D and because the block is contained in the equipment object, the equipment will update. Now to find what has changed, you could go to ACC viewer and check the differences. You can then adjust manually the equipment in Plant 3D.
 
 
 
