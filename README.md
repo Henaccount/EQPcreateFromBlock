@@ -15,5 +15,7 @@ So all written above leads to an AutoCAD block of a vessel with nozzles availabl
 - the nozzle block origin must represent the connection point (port) in Plant 3D
 - the nozzle block must be rotation symmetrical, because the connection direction is detected by the center of the bounding box of the nozzle block. This condition could be replace by an additional drawing element in Inventor, e.g. a point or a line
 
+So when all above is given, this code shows how work with it to create an equiment from this block (can be found in attached DWG). As this is a prove of contept, only one nozzle type will be converted to intelligent nozzles by the tool and this code only works with the given DWG. 
+
 
 
