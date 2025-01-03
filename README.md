@@ -17,7 +17,6 @@ So all written above leads to an AutoCAD block of a vessel with nozzles availabl
 
 So when all above is given, this code shows how to create an equiment from this block (can be found in attached DWG). As this is a prove of contept, only one nozzle type will be converted to intelligent nozzles by the tool and this code only works with the given DWG. 
 
-The concept could be that for equipment with many nozzles you use such a tool to quickly convert it. If updates are coming in over the Data Exchange, the block will be replaced in Plant 3D and because the block is contained in the equipment object, the equipment will update. Now to find what has changed, you could go to ACC viewer and check the differences. You can then adjust manually the equipment in Plant 3D.
 
 
 
